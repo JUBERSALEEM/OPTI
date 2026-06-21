@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Scrollbar hide utility */
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInQuick {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in-quick {
+  animation: fadeInQuick 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom dark mode accent overrides */
+.dark .dark-glass {
+  background: rgba(10, 11, 14, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+/* Sleek Interface Theme Styles */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.dark {
+  --background-color: #0a0b0e;
+}
+
+.dark, .dark-theme-root {
+  background-color: #0a0b0e !important;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.dark .glass-card {
+  background: rgba(18, 20, 26, 0.96);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4), 0 8px 12px -6px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px -5px rgba(0, 0, 0, 0.08), 0 10px 14px -6px rgba(0, 0, 0, 0.08);
+}
+
+.dark .glass-card:hover {
+  box-shadow: 0 14px 35px -5px rgba(0, 0, 0, 0.5), 0 10px 16px -6px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.stat-card {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+  border-left: 4px solid transparent !important;
+}
+
+.stat-yellow {
+  border-left-color: #fbbf24 !important;
+}
+
+.stat-green {
+  border-left-color: #10b981 !important;
+}
+
+.stat-red {
+  border-left-color: #f43f5e !important;
+}
+
+.stat-purple {
+  border-left-color: #8b5cf6 !important;
+}
+
+.progress-bar {
+  height: 6px;
+  border-radius: 3px;
+  background: #e2e8f0;
+  overflow: hidden;
+}
+
+.dark .progress-bar {
+  background: #1e293b;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #8b5cf6, #3b82f6);
+}
+
+.floating-ai {
+  background: linear-gradient(135deg, #4285f4, #9b51e0);
+  box-shadow: 0 4px 15px rgba(66, 133, 244, 0.4);
+}
+
+/* Custom scrollbar adjustments for cards */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.2);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.4);
+}
