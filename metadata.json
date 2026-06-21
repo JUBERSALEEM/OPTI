@@ -1,0 +1,6 @@
+{
+  "name": "Finance Flow",
+  "description": "A high-fidelity fintech-inspired finance controller, tracking ledgers, investments, crypto portfolios, savings goals, instant PDF-ready reporting, and fully supported with Gemini AI analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
